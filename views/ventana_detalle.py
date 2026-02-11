@@ -60,7 +60,7 @@ class VentanaDetalle(QDialog):
                 grupo_judicial = self._crear_grupo_datos_judiciales(expediente, i+1)
                 content_layout.addWidget(grupo_judicial)
         else:
-            label_sin_exp = QLabel("⚠️ No hay expedientes disponibles")
+            label_sin_exp = QLabel("No hay expedientes disponibles")
             label_sin_exp.setStyleSheet("color: orange; font-size: 14px; padding: 20px;")
             content_layout.addWidget(label_sin_exp)
         
