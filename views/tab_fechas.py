@@ -263,7 +263,7 @@ class TabFechas(QWidget):
             self.tabla_resultados.setItem(i, 3, 
                 QTableWidgetItem(deudor.fecha_registro))
             
-            btn_detalle = QPushButton("🔍 Ver Detalle")
+            btn_detalle = QPushButton("Ver Detalle")
             btn_detalle.setStyleSheet("""
                 QPushButton {
                     background-color: #4CAF50;
