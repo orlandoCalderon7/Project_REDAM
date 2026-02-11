@@ -27,7 +27,7 @@ class ControladorREDAM:
         self.captcha_actual = None
         self.deudores_bd = self._cargar_datos_desde_json()
         
-        print(f"✅ Controlador inicializado con {len(self.deudores_bd)} deudores")
+        print(f"Controlador inicializado con {len(self.deudores_bd)} deudores")
     
     def _cargar_datos_desde_json(self):
         """
@@ -43,7 +43,7 @@ class ControladorREDAM:
             
             # Verificar si existe
             if not os.path.exists(ruta_json):
-                print(f"⚠️ Archivo no encontrado: {ruta_json}")
+                print(f"Archivo no encontrado: {ruta_json}")
                 return self._crear_datos_mock()
             
             # Leer archivo
@@ -89,17 +89,17 @@ class ControladorREDAM:
                 
                 deudores.append(deudor)
             
-            print(f"✅ Cargados {len(deudores)} deudores desde JSON")
+            print(f"Cargados {len(deudores)} deudores desde JSON")
             return deudores
             
         except FileNotFoundError:
-            print("⚠️ Archivo deudores_mock.json no encontrado")
+            print("Archivo deudores_mock.json no encontrado")
             return self._crear_datos_mock()
         except json.JSONDecodeError as e:
-            print(f"⚠️ Error al leer JSON: {e}")
+            print(f"Error al leer JSON: {e}")
             return self._crear_datos_mock()
         except Exception as e:
-            print(f"❌ Error inesperado: {e}")
+            print(f" Error inesperado: {e}")
             return self._crear_datos_mock()
     
     def _crear_datos_mock(self):
@@ -157,7 +157,7 @@ class ControladorREDAM:
         deudor2.expedientes.append(expediente2)
         deudores.append(deudor2)
         
-        print(f"✅ Creados {len(deudores)} deudores mock")
+        print(f"Creados {len(deudores)} deudores mock")
         return deudores
     
     def generar_captcha(self):
