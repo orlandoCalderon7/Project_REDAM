@@ -23,7 +23,7 @@ def main():
         sys.exit(app.exec_())
         
     except Exception as e:
-        print(f"❌ Error al iniciar la aplicación: {e}")
+        print(f"Error al iniciar la aplicación: {e}")
         import traceback
         traceback.print_exc()
 
