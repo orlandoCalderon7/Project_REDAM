@@ -52,7 +52,7 @@ class APIRedam:
             return False
             
         except requests.exceptions.RequestException as e:
-            print(f"❌ Error al inicializar sesión: {e}")
+            print(f"Error al inicializar sesión: {e}")
             return False
     
     def obtener_captcha_imagen(self):
@@ -72,7 +72,7 @@ class APIRedam:
             return None
             
         except requests.exceptions.RequestException as e:
-            print(f"❌ Error al obtener captcha: {e}")
+            print(f" Error al obtener captcha: {e}")
             return None
     
     def buscar_por_nombres(self, apellido_paterno, apellido_materno, nombres, captcha):
